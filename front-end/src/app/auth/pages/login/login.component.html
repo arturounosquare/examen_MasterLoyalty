@@ -1,0 +1,31 @@
+<form [formGroup] = "AuthForm" (submit)="sendAuthentication()">
+    <div class="flex justify-content-center flex-wrap authBackground
+    align-items-center">
+    <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6 authComponent">
+        <div class="text-center mb-5">
+            <div class="text-900 text-3xl font-medium mb-3">Tienda</div>
+        </div>
+        <div>
+            <label for="email" class="block text-900 font-medium mb-2">Usuario</label>
+            <input id="email" formControlName="email" type="text" pInputText class="w-full mb-3">
+            <div>&nbsp;<span class="text-dangerValidation"
+                *ngIf="campoNoValido('email')">
+                {{ emailErrorMsg }}
+            </span>
+            </div>
+
+            <label for="passUserTrack" class="block text-900 font-medium mb-2">Contraseña</label>
+            <input id="passUserTrack" formControlName="AuthPassInit" type="password"
+             pInputText class="w-full mb-3">
+             <span class="text-dangerValidation"
+                *ngIf="campoNoValido('AuthPassInit')">
+                 El campo contraseña es requerido
+            </span>             
+            <div class="flex align-items-center justify-content-between mb-6">
+            </div>
+            <button pButton pRipple label="Iniciar sesión" icon="pi pi-user" class="w-full"
+            type="submit"></button>
+        </div>
+    </div>
+    </div>
+</form>

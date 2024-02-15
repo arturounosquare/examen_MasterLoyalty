@@ -1,0 +1,8 @@
+.text-dangerValidation{
+    color: #B00020;
+  }
+
+
+  .p-dialog-mask{
+    pointer-events: auto !important;
+  }
